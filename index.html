@@ -20,7 +20,8 @@
         <span>Logo<span>Her</span></span>
       </a>
       <nav>
-        <ul>
+        <i class="fas fa-bars toggle-menu"></i>
+        <ul class="nav-links">
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#">services</a></li>
           <li><a href="#">portfolio</a></li>
@@ -35,5 +36,42 @@
     </div>
    </header>
   <!-- end header  -->
+   <!-- start landing -->
+     <div class="landing">
+      <div class="overlay"></div>
+      <div class="text">
+        <div class="content">
+          <h2>
+            Hello world!<br>
+            We Are kasper we make Art.
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum 
+          </p>
+        </div>
+      </div>
+     </div>
+   <!-- end landing -->
+
+  <!-- script toggle-menu  -->
+  <script>
+    const toggleMenu = document.querySelector(".toggle-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggleMenu.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+    // close toggle-menu
+    const links = document.querySelectorAll("header nav ul li a");
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+      });
+    });
+  </script>
+  <!-- script toggle-menu  -->
 </body>
 </html>
