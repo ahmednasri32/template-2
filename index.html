@@ -13,32 +13,31 @@
 </head>
 <body>
   <!-- start header  -->
-   <header>
-    <div class="container">
-      <a href="#" class="logo">
-        <div class="img"><img src="assest/image/logo.png" alt="logo"></div>
-        <span>Logo<span>Her</span></span>
-      </a>
-      <nav>
-        <div class="search-box">
-          <input type="search" id="searchInput" placeholder="ابحث هنا">
-          <button type="button" class="btn" id="searchBtn"><i class="fas fa-search search"></i></button>
-        </div>
-        <i class="fas fa-bars toggle-menu"></i>
-        <ul class="nav-links">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">services</a></li>
-          <li><a href="#">portfolio</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">services</a></li>
-        </ul>
-      </nav>
-    </div>
-   </header>
+  <header>
+  <div class="container">
+    <a href="#" class="logo">
+      <span>Logo<span>Her</span></span>
+    </a>
+    <nav>
+      <div class="search-box">
+        <input type="search" id="searchInput" placeholder="ابحث هنا">
+        <button type="button" class="btn" id="searchBtn"><i class="fas fa-search search"></i></button>
+      </div>
+      <i class="fas fa-bars toggle-menu"></i>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">portfolio</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">services</a></li>
+      </ul>
+    </nav>
+  </div>
+  </header>
   <!-- end header  -->
    <!-- start landing -->
-     <div class="landing">
+  <div class="landing">
       <div class="overlay"></div>
       <div class="text">
         <div class="content">
@@ -61,49 +60,57 @@
         <li class="bullet"></li>
       </ul>
     </div>
-   <!-- end landing -->
-
-  <!-- script toggle-menu  -->
-  <script>
-    const toggleMenu = document.querySelector(".toggle-menu");
-    const navLinks = document.querySelector(".nav-links");
-
-    toggleMenu.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
-    });
-    // close toggle-menu
-    const links = document.querySelectorAll("header nav ul li a");
-
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-      });
-    });
-    const bullets = document.querySelectorAll(".bullet");
-    
-    bullets.forEach(bullet => {
-      bullet.addEventListener("click", () => {
-        bullets.forEach(b => b.classList.remove("active"));
-        bullet.classList.add("active");
-      });
-    });
-
-    const searchBtn = document.getElementById("searchBtn");
-    const searchInput = document.getElementById("searchInput");
-
-    searchBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      searchInput.classList.toggle("active");
-      searchInput.focus();
-    });
-
-    // إغلاق البحث عند الضغط خارج الصندوق (اختياري)
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".search-box")) {
-        searchInput.classList.remove("active");
-      }
-    });
-  </script>
-  <!-- script toggle-menu  -->
+  <!-- end landing -->
+  <!-- start services -->
+   <div class="services">
+    <div class="container">
+      <div class="main-heading">
+        <h2>Services</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita recusandae optio dolor illo!
+        </p>
+      </div>
+      <div class="services-container">
+        <div class="srv-box">
+          <i class="fas fa-desktop fa-3x"></i>
+          <div class="text">
+            <h3>Some text her sub heading</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dignissimos placeat harum hic inventore, ea cum similique unde explicabo?
+            </p>
+          </div>
+        </div>
+        <div class="srv-box">
+          <i class="fas fa-desktop fa-3x"></i>
+          <div class="text">
+            <h3>Some text her sub heading</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dignissimos placeat harum hic inventore, ea cum similique unde explicabo?
+            </p>
+          </div>
+        </div>
+        <div class="srv-box">
+          <i class="fas fa-desktop fa-3x"></i>
+          <div class="text">
+            <h3>Some text her sub heading</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dignissimos placeat harum hic inventore, ea cum similique unde explicabo?
+            </p>
+          </div>
+        </div>
+        <div class="srv-box">
+          <i class="fas fa-desktop fa-3x"></i>
+          <div class="text">
+            <h3>Some text her sub heading</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dignissimos placeat harum hic inventore, ea cum similique unde explicabo?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  <!-- end services -->
+  <script src="assest/js/main.js"></script>
 </body>
 </html>

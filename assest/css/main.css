@@ -18,7 +18,6 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: black;
 }
 ul {
   list-style: none;
@@ -48,12 +47,59 @@ ul {
   }
 }
 /* end global ruls  */
+/* start components  */
+.main-heading {
+  text-align: center;
+}
+
+.main-heading h2 {
+  font-weight: normal;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #333;
+  bottom: -30px;
+  width: 120px;
+}
+
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  bottom: -38px;
+  background-color: white;
+}
+.main-heading p {
+  width: 550px;
+  margin: 0 auto 100px;
+  max-width: 100%;
+  line-height: 2;
+  color: #777;
+}
+/* end components  */
+
 /* start header  */
 header {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
   z-index: 2;
+  background-color: #000000;
+  box-shadow: 2px 1px 3px #181818;
 }
 header .container {
   display: flex;
@@ -63,29 +109,14 @@ header .container {
   min-height: 97px;
   gap: 15px;
 }
-header .container::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  background-color: #a2a2a2;
-  bottom: 0;
-  width: calc(100% - 30px);
-  left: 15px;
-}
 header .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
-header .logo .img {
-  width: 50px;
-}
-header .logo img {
-  max-width: 100%;
-}
 header .logo span {
   padding-left: 8px;
-  color: var(--secondary-color);
+  color: white;
   font-size: 1.8rem;
   text-transform: uppercase;
 }
@@ -106,18 +137,16 @@ header nav {
 }
 header nav .search-box {
     display: flex;
+    align-items: center;
     gap: 5px;
-    width: 100%;
-    height: 20px;
     flex-direction: row-reverse;
 }
 header nav .search-box #searchInput {
     direction: rtl;
-    padding:15px 15px;
+    padding: 3px;
     border-radius: 5px;
     border: 1px solid #faf8f8;
     outline: none;
-    width: 100%;
     caret-color: #0C73CC;
     font-weight: 500;
     font-size: 14px;
@@ -131,14 +160,14 @@ header nav .search-box #searchInput:focus {
 }
 header nav .search-box .btn {
   cursor: pointer;
-  font-size: 13px;
   color: white;
   border: none;
-  padding:16px 10px;
-  display: flex;
-  align-items: center;
   border-radius: 5px;
   background-color: #cdcece7f;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 767px) {
   header nav .search-box #searchInput {
@@ -151,15 +180,12 @@ header nav .search-box .btn {
     transition: all 0.3s ease;
   }
   header nav .search-box #searchInput.active {
-    width: 100% !important;
+    width: 100%;
     opacity: 1;
     font-size: 12px;
-    padding:2px 5px;
     border-radius: 5px;
     border: 1px solid #faf8f8;
-  }
-  header nav .search-box .btn {
-    padding: 5px 3px;
+    padding: 5px 5px 5px 0;
   }
 }
 header nav .toggle-menu {
@@ -206,7 +232,7 @@ header nav ul li a {
   text-decoration: none;
   font-size: 18px;
   transition: 0.3s;
-  padding: 40px 10px;
+  padding: 10px 10px;
   position: relative;
 }
 @media (max-width: 767px) {
@@ -221,7 +247,6 @@ header nav ul li a {
 header nav ul li a.active,
 header nav ul li a:hover {
   color: var(--brand-color);
-  border-bottom: 2px solid var(--brand-color);
   z-index: 3;
 }
 @media (max-width: 767px) {
@@ -339,5 +364,42 @@ header nav .form .btn {
   background-color: var(--brand-color);
   border-color: var(--brand-color);
 }
-
 /* start landing  */
+.services {
+  padding: 100px 0;
+}
+@media (min-width: 768px) {
+  .services .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      grid-column-gap: 40px;
+      grid-row-gap: 60px;
+  }
+}
+.services .srv-box {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .services .srv-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+.services .srv-box i {
+  margin-right: 50px;
+}
+@media (max-width: 767px) {
+  .services .srv-box i {
+    margin: 0 auto 20px;
+  }
+}
+.services .srv-box h3 {
+  margin-bottom: 30px;
+  color: var(--brand-color);
+}
+.services .srv-box p {
+  line-height: 2;
+  color: #777;
+}
