@@ -430,15 +430,15 @@ header nav .form .btn {
   z-index: 2;
   flex: 1;
 }
-.design .image img {
-  max-width: 100%;
-  position: relative;
-  bottom: -150px;
-}
 @media (max-width: 767px) {
   .design .image {
     display: none;
   }
+}
+.design .image img {
+  max-width: 100%;
+  position: relative;
+  bottom: -150px;
 }
 .design .text {
   color: white;
