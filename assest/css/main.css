@@ -462,3 +462,30 @@ header nav .form .btn {
   top: 1px;
 }
 /* start section design  */
+/* start portfolio  */
+.portfolio {
+  padding: 100px 0;
+}
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.portfolio .shuffle li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.portfolio .shuffle li.active {
+  background-color: var(--brand-color);
+  color: white;
+}
+.portfolio .imgs .box {
+
+}
+.portfolio .imgs .box img {
+  max-width: 100%;
+}
+.portfolio .imgs .container
+/* end portfolio  */
