@@ -2,7 +2,7 @@
 :root {
   --brand-color:#0C73CC;
   --secondary-color:#EB3686;
-  --transparent-color: oklch(0.51 0.19 0.63 / 0.38);
+  --transparent-color: oklch(46.23% 0.16726 261.488 / 0.38);
   --bg-dark: #0f172a;
 }
 /* end variables */
@@ -141,6 +141,7 @@ header nav .search-box {
     align-items: center;
     gap: 5px;
     flex-direction: row-reverse;
+    position: relative;
 }
 header nav .search-box #searchInput {
     direction: rtl;
@@ -159,11 +160,13 @@ header nav .search-box #searchInput:focus {
   border-color: #2196f3;
 }
 header nav .search-box .btn {
+  position: absolute;
+  left: 0;
   cursor: pointer;
   color: white;
   border: none;
   background-color: #cdcece7f;
-  padding: 5px;
+  padding: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,10 +189,16 @@ header nav .search-box .btn {
     border: 1px solid #faf8f8;
     padding: 5px 5px 5px 0;
   }
+    header nav .search-box .btn {
+      position:static;
+      left: auto;
+      padding: 4px;
+      border-radius: 3px;
+    }
 }
 header nav .toggle-menu {
   color: white;
-  font-size: 22px;
+  font-size: 26px;
   cursor: pointer;
 }
 @media (min-width: 768px) {
@@ -558,6 +567,7 @@ header nav .form .btn {
  }
 .video .text {
   width: 100%;
+  height: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -598,7 +608,7 @@ header nav .form .btn {
 @media (max-width: 767px) {
   .about img {
     bottom: -100px;
-    margin-top: -100px;
+    margin-top: -150px;
   }
 }
 /* end about  */
@@ -649,7 +659,7 @@ header nav .form .btn {
   width: 40px;
   height: 40px;
   display: flex;
-  background-color: black;
+  background-color: var(--brand-color);
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -664,3 +674,97 @@ header nav .form .btn {
   font-size: 14px;
 }
 /* start stats  */
+/* start our skills */
+.our-skills {
+  padding: 100px 0;
+}
+.our-skills .container {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .our-skills .container {
+    flex-direction: column;
+  }
+}
+.our-skills .testimonials {
+  flex: 1;
+  gap: 10px;
+  padding: 10px;
+}
+.our-skills .testimonials .content {
+  padding: 20px;
+}
+@media (min-width: 991px) {
+  .our-skills .testimonials .content {
+    display: flex;
+    gap: 10px;
+  }
+}
+.our-skills .testimonials > p {
+  line-height: 2;
+  color: #777;
+  text-align: center;
+  max-width: 440px;
+  margin: 10px auto 0;
+}
+.our-skills .testimonials h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.our-skills .testimonials .content .card {
+  box-shadow: 0px 3px 3px #ddd;
+  position: relative;
+  padding: 10px 0 0;
+}
+@media (max-width: 767px) {
+  .our-skills .testimonials .content .card {
+    margin-bottom: 20px;
+  }
+}
+.our-skills .testimonials .content .card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right,#395fb9 ,#2196f3);
+}
+.our-skills .testimonials .content .card .stars {
+  text-align: center;
+  margin: 20px 0;
+}
+.our-skills .testimonials .content .card .stars i {
+  color: var(--brand-color);
+}
+.testimonials .content .card p {
+  line-height: 1.3;
+  color: #777;
+  margin-bottom: 10px;
+  padding:  0 10px ;
+}
+.testimonials .content .card .client {
+  background: linear-gradient(to right, #395fb9, #2196f3);
+  padding: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.testimonials .content .card .client span {
+  font-size: 14px;
+}
+.testimonials .content .card .client img {
+  width: 50px;
+  height: 50px;
+  object-fit:cover;
+  border-radius: 50%;
+  background-color: #0f172a;
+}
+.our-skills .skills {
+  flex: 1;
+}
+/* end our skills */
