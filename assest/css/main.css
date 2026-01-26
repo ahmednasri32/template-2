@@ -53,7 +53,6 @@ ul {
 .main-heading {
   text-align: center;
 }
-
 .main-heading h2 {
   font-weight: normal;
   font-size: 40px;
@@ -61,7 +60,6 @@ ul {
   margin-bottom: 70px;
   text-transform: uppercase;
 }
-
 .main-heading h2::before {
   content: "";
   position: absolute;
@@ -72,7 +70,6 @@ ul {
   bottom: -30px;
   width: 120px;
 }
-
 .main-heading h2::after {
   content: "";
   position: absolute;
@@ -261,8 +258,8 @@ header nav ul li a:hover {
 @media (max-width: 767px) {
   header nav ul li a.active,
   header nav ul li a:hover {
-  color: var(--brand-color);
-  border-bottom: none;
+   color: var(--brand-color);
+   border-bottom: none;
   }
 }
 header nav .form {
@@ -880,6 +877,7 @@ header nav .form .btn {
 .pricing .plans .plan {
   background-color: #fcfcfc;
   text-align: center;
+  position: relative;
 }
 .pricing .plans .plan .head {
   padding: 40px;
@@ -910,7 +908,7 @@ header nav .form .btn {
   right: -15px;
 }
 .pricing .plans .plan ul {
-  border-bottom: 1px solid var
+  border-bottom: 1px solid var(--brand-color);
 }
 .pricing .plans .plan ul li {
   padding: 20px;
