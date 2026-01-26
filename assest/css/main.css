@@ -4,6 +4,7 @@
   --secondary-color:#EB3686;
   --transparent-color: oklch(46.23% 0.16726 261.488 / 0.38);
   --bg-dark: #0f172a;
+  --section-padding: 100px;
 }
 /* end variables */
 /* start global ruls  */
@@ -126,7 +127,7 @@ header .logo span {
     font-size: 20px;
   }
 }
-header .logo span span {
+header .logo span:last-of-type {
   color: var(--brand-color);
 }
 header nav {
@@ -374,7 +375,8 @@ header nav .form .btn {
 }
 /* start landing  */
 .services {
-  padding: 100px 0;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 }
 @media (min-width: 768px) {
   .services .services-container {
@@ -415,7 +417,8 @@ header nav .form .btn {
 .design {
   display: flex;
   align-items: center;
-  padding: 100px 0;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
   height: 600px;
   background-image: url("../image/landing-2.jpg");
   background-size: cover;
@@ -471,7 +474,8 @@ header nav .form .btn {
 /* start section design  */
 /* start portfolio  */
 .portfolio {
-  padding: 100px 0;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 }
 .portfolio .shuffle {
   display: flex;
@@ -620,7 +624,8 @@ header nav .form .btn {
 /* end about  */
 /* start stats  */
 .stats {
-  padding: 100px 0;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
   text-align: center;
   background-image: url("../image/landing-2.jpg");
   background-size: cover;
@@ -682,7 +687,8 @@ header nav .form .btn {
 /* start stats  */
 /* start our skills */
 .our-skills {
-  padding: 100px 0;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 }
 .our-skills .container {
   display: flex;
@@ -825,7 +831,8 @@ header nav .form .btn {
 /* end our skills */
 /* start Quote */
 .quote {
-  padding: 100px 0;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
   background-image: url("../image/landing-2.jpg");
   background-size: cover;
   position: relative;
@@ -862,7 +869,8 @@ header nav .form .btn {
 /* end Quote */
 /* start Pricing */
 .pricing {
-  padding: 100px 0;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 }
 .pricing .plans {
   display: grid;
@@ -924,6 +932,7 @@ header nav .form .btn {
   border: 1px solid var(--brand-color);
   width: fit-content;
   margin: 30px auto;
+  color: black;
 }
 .pricing .contact-text {
   text-align: center;
@@ -942,7 +951,8 @@ header nav .form .btn {
 /* end Pricing */
 /* start Subscribe */
 .subscribe {
-  padding: 100px 0;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
   background-color: #0f172a;
   position: relative;
   color: white;
@@ -1012,3 +1022,142 @@ header nav .form .btn {
   }
 }
 /* end Subscribe */
+/* start Contact  */
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.contact .content {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .contact .content {
+    flex-direction: column;
+  }
+}
+.contact .content form {
+  flex-basis: 70%;
+}
+.contact .content form .main-input {
+  padding: 20px;
+  display: block;
+  border: solid 1px #ccc;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.contact .content form .main-input:focus {
+  outline: none;
+}
+.contact .content form textarea.main-input {
+  height: 200px;
+  max-width:796px ;
+}
+.contact .content form input[type="submit"] {
+  background-color: var(--brand-color);
+  color: white;
+  padding: 20px;
+  border: none;
+  display: flex;
+  margin: auto;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.contact .content .info {
+  flex-basis: 25%;
+}
+@media (max-width: 767px) {
+  .contact .content .info {
+    order: -1;
+    text-align: center;
+  }
+}
+.contact .content .info h4 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.contact .content .info .phone {
+  display: block;
+  color: #777;
+  margin-bottom: 10px;
+}
+.contact .content .info h4:nth-of-type(2) {
+  margin-top: 90px;
+}
+@media (max-width: 767px) {
+  .contact .content .info h4:nth-of-type(2) {
+    margin-top: 30px;
+  }
+}
+.contact .content .info address {
+  color: #777;
+  line-height: 2;
+}
+@media (max-width: 767px) {
+  .contact .content .info address {
+    margin-bottom: 30px;
+  }
+}
+/* end Contact  */
+/* start footer  */
+.footer {
+  padding-top: calc(var(--section-padding) / 2);
+  padding-bottom: calc(var(--section-padding) / 2);
+  background-image: url(../image/landing-2.jpg);
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 /75%);
+}
+.footer .container {
+  position: relative;
+}
+.footer .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.footer .logo a {
+  display: block;
+  margin: auto;
+}
+.footer .logo span {
+  color: white;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+.footer .logo span:last-of-type {
+  margin-left: 10px;
+}
+.footer p:not(.copyright) {
+  text-transform: uppercase;
+  padding: 20px;
+  border-bottom: 1px solid white ;
+  font-size: 22px;
+  width: fit-content;
+  margin: 20px auto;
+}
+.footer .social-icons i {
+  padding: 10px 15px;
+}
+.footer .copyright {
+  margin-top: 60px;
+}
+.footer .copyright span {
+  font-weight: bold;
+  color: var(--brand-color);
+}
+
+/* end footer  */
